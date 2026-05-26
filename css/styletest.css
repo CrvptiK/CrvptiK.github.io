@@ -1,0 +1,259 @@
+@font-face {
+    font-family: open-sans;
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --main-color: #220744;
+    --transparent-color: rgba(34, 8, 65, 0.4);
+    --secondary-color: #e0d996;
+    --text-color: #a8a88a;
+    --main-section-height: 600px;
+    --section-padding: 100px;
+    --h2-margin-bottom: 40px;
+    --paragraph-line-height: 2;
+    --main-border-radius: 2px;
+    --secondary-border-radius: 5px;
+}
+
+/* ---------------- tutorial said to do this so i am doing this ------------------- */ 
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: open-sans;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* ------------------ header line -------------------- */
+/* obviously used a tutorial for this, cheers */
+
+header .left-section img {
+    width: 100px;
+}
+
+header {
+    color: var(--secondary-color);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 97px;
+}
+
+header .container::after {
+    content: "";
+    background-color: #e0d996;
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .mid-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .mid-section .toggle-menu {
+    font-size: 22px;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    header .mid-section .toggle-menu {
+        display: none;
+    }
+}
+
+header .mid-section ul {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    header .mid-section ul {
+        display: none;
+    }
+
+    header .mid-section .toggle-menu:hover+ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        /* absolute to the first parent with position relaive, which is in this case the container */
+        top: 100%;
+        left: 0;
+        background-color: rgb(0 0 0 / 50%);
+        width: 100%;
+    }
+}
+
+header .mid-section ul a {
+    padding: 40px 10px;
+    display: block;
+    color: var(--secondary-color);
+    font-size: 14px;
+    transition: var(--main-transition-duration);
+    position: relative;
+    z-index: 3;
+    /* <<< Learned: you can't add the z-index without adding the position. >>>  */
+}
+
+@media (max-width: 767px) {
+    header .mid-section ul a {
+        padding: 10px;
+    }
+}
+
+header .mid-section ul .active,
+header .mid-section ul a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* ----------------- landing -------------------- */
+
+.landing {
+    background-color: #220131;
+    background-image: url(./images/landing.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 1, 37, 0.411);
+}
+
+.landing .text {
+    border-radius: 0px var(--secondary-border-radius) var(--secondary-border-radius) 0;
+    color: var(--secondary-color);
+    background-color: var(--transparent-color);
+    width: 50%;
+    padding: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.landing .text .content {
+    max-width: 500px;
+}
+
+@media (max-width: 767px) {
+
+    .landing .text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .landing .text .content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.landing .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: var(--h2-margin-bottom);
+}
+
+.landing .text .content p {
+    font-size: 14px;
+    line-height: var(--paragraph-line-height);
+}
+
+/* ------------------- footer ------------------ */
+/* why do you refuse to move to the damned bottom of the page */
+/* finally! thank you, stack overflow */
+
+footer {
+    background-color: rgba(25, 1, 53, 0.4);
+    background-size: cover;
+    padding: calc(var(--section-padding) / 3) 0;
+    text-align: center;
+    color: #e0d996;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 1, 53, 0.4);
+}
+
+footer .container {
+    position: relative; 
+    z-index: 2;
+}
+
+footer p:nth-of-type(1) {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: lighter;
+    word-spacing: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* imma not lie, aggressive copy pasting for this one, after futilely trying to fistfight youtube for a tutorial */
+footer p:nth-of-type(1)::after {
+    content: "";
+    background-color: #e0d996;
+    position: absolute;
+    height: 1px;
+    width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
