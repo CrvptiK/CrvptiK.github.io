@@ -48,6 +48,35 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+/* some bootstrap 3 code found online and mentioned in my main reference, so i hope this helps my cross-device display issues */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
 /* ------------------ header line -------------------- */
 /* obviously used a tutorial for this, cheers */
 
