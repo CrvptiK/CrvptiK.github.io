@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: open-sans;
     src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
@@ -112,7 +113,6 @@ header .mid-section ul {
         display: flex;
         flex-direction: column;
         position: absolute;
-        /* absolute to the first parent with position relaive, which is in this case the container */
         top: 100%;
         left: 0;
         background-color: rgb(0 0 0 / 50%);
@@ -128,7 +128,6 @@ header .mid-section ul a {
     transition: var(--main-transition-duration);
     position: relative;
     z-index: 3;
-    /* <<< Learned: you can't add the z-index without adding the position. >>>  */
 }
 
 @media (max-width: 767px) {
@@ -246,7 +245,8 @@ footer p:nth-of-type(1) {
     position: relative;
 }
 
-/* imma not lie, aggressive copy pasting for this one, after futilely trying to fistfight youtube for a tutorial */
+/* imma not lie, aggressive copy pasting for this one, after futilely trying to fistfight youtube for a tutorial, and then copy pasted it for the header xD */
+
 footer p:nth-of-type(1)::after {
     content: "";
     background-color: #e0d996;
