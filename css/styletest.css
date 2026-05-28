@@ -192,7 +192,7 @@ header .mid-section ul a:hover {
 .landing .text {
     border-radius: 0px var(--secondary-border-radius) var(--secondary-border-radius) 0;
     color: var(--secondary-color);
-    background-color: var(--transparent-color);
+    background-color: rgba(8, 0, 17, 0.5);
     width: 50%;
     padding: 50px;
     position: absolute;
@@ -251,7 +251,7 @@ header .mid-section ul a:hover {
 .textbox .text {
     border-radius: 0px var(--secondary-border-radius) var(--secondary-border-radius) 0;
     color: var(--secondary-color);
-    background-color: var(--transparent-color);
+    background-color: rgba(8, 0, 17, 0.5);
     width: 50%;
     padding: 50px;
     position: absolute;
@@ -296,7 +296,7 @@ header .mid-section ul a:hover {
 /* finally! thank you, stack overflow */
 
 footer {
-    background-color: var(--transparent-color);
+    background-color: rgba(8, 0, 17, 0.5);
     background-size: cover;
     padding: calc(var(--section-padding) / 3) 0;
     text-align: center;
