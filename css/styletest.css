@@ -8,7 +8,7 @@
     --main-color: #220744;
     --transparent-color: rgba(34, 8, 65, 0.4);
     --secondary-color: #e0d996;
-    --text-color: #a8a88a;
+    --text-color: #bbb89f;
     --main-section-height: 600px;
     --section-padding: 100px;
     --h2-margin-bottom: 40px;
@@ -167,8 +167,7 @@ header .mid-section ul a {
 
 header .mid-section ul .active,
 header .mid-section ul a:hover {
-    color: var(--main-color);
-    border-bottom: 1px solid var(--main-color);
+    color: var(--text-color);
 }
 
 /* ----------------- landing -------------------- */
@@ -187,7 +186,7 @@ header .mid-section ul a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(20, 1, 37, 0.411);
+    background-color: rgba(29, 0, 60, 0.6);
 }
 
 .landing .text {
@@ -229,6 +228,65 @@ header .mid-section ul a:hover {
 }
 
 .landing .text .content p {
+    font-size: 14px;
+    line-height: var(--paragraph-line-height);
+}
+
+/* ----------------- textbos -------------------- */
+/* landing but with extra steps (actually fewer but psst */
+
+.textbox {
+    background-color: #220131;
+}
+
+.textbox .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 0, 60, 0.6);
+}
+
+.textbox .text {
+    border-radius: 0px var(--secondary-border-radius) var(--secondary-border-radius) 0;
+    color: var(--secondary-color);
+    background-color: var(--transparent-color);
+    width: 50%;
+    padding: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.textbox .text .content {
+    max-width: 500px;
+}
+
+@media (max-width: 767px) {
+
+    .textbox .text {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .textbox .text .content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.textbox .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: var(--h2-margin-bottom);
+}
+
+.textbox .text .content p {
     font-size: 14px;
     line-height: var(--paragraph-line-height);
 }
