@@ -6,7 +6,7 @@
 
 :root {
     --main-color: #220744;
-    --transparent-color: rgba(34, 8, 65, 0.4);
+    --transparent-color: rgba(16, 0, 36, 0.5);
     --secondary-color: #e0d996;
     --text-color: #bbb89f;
     --main-section-height: 600px;
@@ -232,7 +232,7 @@ header .mid-section ul a:hover {
     line-height: var(--paragraph-line-height);
 }
 
-/* ----------------- textbos -------------------- */
+/* ----------------- textbox -------------------- */
 /* landing but with extra steps (actually fewer but psst */
 
 .textbox {
@@ -296,7 +296,7 @@ header .mid-section ul a:hover {
 /* finally! thank you, stack overflow */
 
 footer {
-    background-color: rgba(25, 1, 53, 0.4);
+    background-color: var(--transparent-color);
     background-size: cover;
     padding: calc(var(--section-padding) / 3) 0;
     text-align: center;
