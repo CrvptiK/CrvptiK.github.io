@@ -6,5 +6,5 @@ Prepare for some Storytelling and Rpg Tools!
 
 <br>
 
-Check out the first Assignment [here](https://CrvptiK.github.io/assignments/assignment01.html)
+Check out the website [here](https://crvptik.github.io/)
 
