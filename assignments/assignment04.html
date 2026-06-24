@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webpage for Learning">
+    <meta name="keywords" content="HTML, Web Programming, JavaScript">
+    <meta name="author" content="Cil Klein">
+    <title>JavaScript Test</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styletest.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="left-section">
+                <a href="#" class="logo">
+                    <img width="200" src="./images/logo.PNG" alt="Logo">
+                </a>
+            </div>
+            <nav class="mid-section">
+                <i class="toggle-menu"></i>
+                <ul>
+                    <li><a href="https://CrvptiK.github.io/index.html">Home</a></li>
+                    <li><a href="https://CrvptiK.github.io/assignments/assignment01.html">Assignment 1</a></li>
+                    <li><a class="active" href="#assignment02">Assignment 2</a></li>
+                    <li><a href="https://CrvptiK.github.io/assignments/assignment03.html">Assignment 3</a></li>
+                </ul>
+    </header>
+
+<!-- I kinda gave up on trying to get the translator for md to html via javascript running, for now that it of course...
+ I cannot deal with the heat, good god, so instead, have a copy of my initial tests with javascript -->
+
+
+<div class="textbox">
+        <div class="overlay">
+        </div>
+        <div class="text">
+            <div class="content">
+                <h2>JAVASCRIPT TESTS</h2>
+    <button type="button" onclick="document.getElementById('time').innerHTML = Date()">
+    Click me to get Date and Time!</button>
+
+<p id="time"></p>
+
+<p id="hidden" style="display:none">I kinda gave up on trying to get the translator for md to html via javascript running, for now that it of course... 
+ I cannot deal with the heat, good god, so instead, have a copy of my initial tests with javascript</p>
+
+<button type="button" onclick="document.getElementById('hidden').style.display='block'">Click Me to read my Thoughts!</button>
+
+<p></p>
+
+<button type="button" onclick="document.querySelectorAll('#time, #hidden').forEach(el => el.style.display='none')">Click Me to Hide Everything!</button>
+
+</div>
+</div>
+
+</body>
+</html> 
